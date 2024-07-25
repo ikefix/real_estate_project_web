@@ -1,0 +1,14 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "*",
+        "league/omnipay": "*",
+        "omnipay/paypal": "*",
+        "stripe/stripe-php": "^12.6",
+        "twilio/sdk": "^8.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
