@@ -133,6 +133,7 @@ function payWithPaystack() {
         ref: '' + Math.floor((Math.random() * 1000000000) + 1),
         callback: function(response) {
             window.location.href = 'verify_paystack.php?reference=' + response.reference;
+            
         },
         onClose: function() {
             alert('Transaction was not completed, window closed.');
