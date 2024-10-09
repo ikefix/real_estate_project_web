@@ -75,7 +75,7 @@ if(!isset($_SESSION['agent'])) {
                                             <?php echo $row['purchase_date']; ?>
                                         </td>
                                         <td>
-                                            <?php echo $row['expire_date']; ?>
+                                            <?php echo $row['expiry_date']; ?>
                                         </td>
                                         <td>
                                             <?php echo $row['payment_method']; ?>

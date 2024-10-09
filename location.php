@@ -40,7 +40,7 @@ foreach ($result as $row) {
                                             FROM agents a
                                             JOIN orders o 
                                             ON a.id = o.agent_id
-                                            WHERE o.expire_date < ? AND o.currently_active = ?
+                                            WHERE o.expiry_date < ? AND o.currently_active = ?
                                         )");
             $statement->execute([$id,date('Y-m-d'),1]);
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);

@@ -2,7 +2,7 @@
 
 <?php
 $allowed_agents = [6,3];
-$q = $pdo->prepare("SELECT agent_id FROM orders WHERE expire_date >= CURDATE() AND currently_active=?");
+$q = $pdo->prepare("SELECT agent_id FROM orders WHERE expiry_date >= CURDATE() AND currently_active=?");
 $q->execute([1]);
 $result = $q->fetchAll();
 foreach($result as $row) {

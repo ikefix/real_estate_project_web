@@ -235,7 +235,7 @@ if(!empty($_GET['price'])) {
                                                     FROM agents a
                                                     JOIN orders o 
                                                     ON a.id = o.agent_id
-                                                    WHERE o.expire_date < ? AND o.currently_active = ?
+                                                    WHERE o.expiry_date < ? AND o.currently_active = ?
                                                 ) ORDER BY p.is_featured DESC");
                             $q->execute([date('Y-m-d'),1]);
                             $total = $q->rowCount();

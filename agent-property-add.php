@@ -26,7 +26,7 @@ $statement->execute(array($_SESSION['agent']['id'],1));
 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 foreach ($result as $row) {
     $allowed_properties = $row['allowed_properties'];
-    $expire_date = $row['expire_date'];
+    $expire_date = $row['expiry_date'];
 }
 
 $statement = $pdo->prepare("SELECT * FROM properties WHERE agent_id=?");
